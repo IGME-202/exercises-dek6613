@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<div class="projects-list">
+  {% assign sorted = site.projects %}
+  {% assign items = sorted | reverse %}
+  {% for project_item in items %}
+  <article class="post-preview">
+    <a href="{{ project_item.url | relative_url }}">
+  	  <h2 class="post-title">{{ project_item.title }}</h2>
+
+  	  {% if project_item.tagline %}
+  	  <h3 class="post-subtitle">
+  	    {{ project_item.tagline }}
+  	  </h3>
+  	  {% endif %}
+    </a>
+
+    <p class="post-meta">
+      Published on {{ project_item.date | date: site.date_format }}
+    </p>
+
+    {% if project_item.tags.size > 0 %}
+    <div class="blog-tags">
+      Tags:
+      {% if site.link-tags %}
+      {% for tag in project_item.tags %}
+      <a href="{{ '/tags' | relative_url }}#{{- tag -}}">{{- tag -}}</a>
+      {% endfor %}
+      {% else %}
+        {{ project_item.tags | join: ", " }}
+      {% endif %}
+    </div>
+    {% endif %}
+
+   </article>
+  {% endfor %}
+</div>

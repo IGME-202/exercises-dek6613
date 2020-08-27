@@ -1,0 +1,11 @@
+theme:        jekyll-theme-slate
+
+plugins:
+  - jekyll-sitemap
+
+title:        IGME 202 Exercises
+description:  For user eabigm
+
+collections:
+  exercises:
+    output: false
