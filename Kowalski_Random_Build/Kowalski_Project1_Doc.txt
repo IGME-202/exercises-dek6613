@@ -1,0 +1,33 @@
+Daniel Kowalski
+IGME 202, Section 5
+
+Assignment:
+Project 1 - Random
+
+Description:
+A showcase of random generation and random placement using Gaussian distributed hordes of lumberjacks led by a gang of Gaussian sized lumberjacks, all approaching a random hilly terrain of randomly placed trees.
+
+User Responsibilities:
+The user must press C to rotate between the 6 cameras (noted in the top left of the GUI). The 6th camera is a first person character that can be moved with WASD, spacebar and the mouse. The user is free to observe the randomness at their leisure.
+
+Above and Beyond:
+While not much, I added an extra script to help make the cameras better, and learned about Unity's script execution order menu to ensure that all of the objects were placed properly. The extra script positions the lumberjack cameras vertically based on terrain, such that (aside from rare edge cases) the lumberjacks are always in clear and close view.
+
+Known Issues:
+- It is possible for multiple objects to spawn inside of each other due to the random nature of the program. This could result in some strange occurances such as lumberjacks being clipped into each other.
+- The first person camera can jump off of the side of the map and become unusable. Additionally, the first person camera can be moved while in other camera views.
+- I'm not entirely sure how, but the terrain sideview camera can rotate up and down with the mouse. This is arguably a benefit rather than an issue, but I figured I should document it here as well since I have no clue how it ended up this way.
+
+Requirements not completed:
+- None that I'm aware of
+
+Sources:
+Lumberjack Model, by HONETi in Unity Asset Store.
+- Link: https://assetstore.unity.com/packages/3d/characters/humanoids/fantasy/3-free-characters-18098
+Tree Model, by greyRoad Studio in Unity Asset Store.
+- Link: https://assetstore.unity.com/packages/3d/vegetation/lowpoly-trees-and-rocks-88376
+Grass Texture, by LowlyPoly in Unity Asset Store.
+- Link: https://assetstore.unity.com/packages/2d/textures-materials/glass/stylized-grass-texture-153153
+
+Notes:
+I'll try to set up a better "above and beyond" feature next time. This weekend I was swamped with work but I knew I could do at least the base parts of the project on time, so I didn't want to "waste" my grace period to try and add extra features.
