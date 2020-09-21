@@ -8,8 +8,6 @@ using UnityEngine;
 
 public class TerrainGen : MonoBehaviour
 {
-	public GameObject gaussCloseupCamera;
-
 	private TerrainData myTerrainData;
 	public Vector3 worldSize;
 	public int resolution = 129;
@@ -32,8 +30,6 @@ public class TerrainGen : MonoBehaviour
 
 		// Assign values from heightArray into the terrain object's heightmap
 		myTerrainData.SetHeights(0, 0, heightArray);
-
-		AdjustCameras();
 	}
 
 
@@ -65,14 +61,5 @@ public class TerrainGen : MonoBehaviour
 				heightArray[i, j] = Mathf.PerlinNoise(xCoord, yCoord);
 			}
 		}
-	}
-
-	void AdjustCameras()
-    {
-		Vector3 pos = gaussCloseupCamera.transform.position;
-
-		// Adjust camera's Y pos based on the terrain's
-		pos.y = Terrain.activeTerrain.SampleHeight(pos) + Terrain.activeTerrain.transform.position.y + 3;
-		gaussCloseupCamera.transform.position = pos;
 	}
 }
