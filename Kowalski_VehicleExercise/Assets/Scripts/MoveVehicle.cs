@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveVehicle : MonoBehaviour
 {
-    Vector3 vehiclePosition = Vector3.zero;
+    Vector3 vehiclePosition;
     Vector3 direction = Vector3.right;
     Vector3 velocity = Vector3.zero;
     Vector3 acceleration = Vector3.zero;
@@ -24,7 +24,7 @@ public class MoveVehicle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        vehiclePosition = transform.position;
     }
 
     // Update is called once per frame

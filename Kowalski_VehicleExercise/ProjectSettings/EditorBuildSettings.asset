@@ -5,7 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Vehicle.unity
     guid: 5306830fcf9a53a44a441fc51ef413ed
+  - enabled: 1
+    path: Assets/Scenes/CollisionTest.unity
+    guid: d96291e630b728d4c84b87fea2a6f2c8
   m_configObjects: {}
